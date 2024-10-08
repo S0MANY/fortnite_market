@@ -1,7 +1,9 @@
 import logo from '../img/logo-removebg-preview.png'
 import { Cart } from '../Components/Cart'
 import { useState } from 'react'
+
 function Header(props) {
+
 
     const [isVisible , setVisibility] = useState(false)
 
@@ -12,6 +14,9 @@ function Header(props) {
     return (
         <header>
             <div className="head">
+                <div className="menuIcon">
+                    <img style={{height:"40px"}}  src="https://img.icons8.com/?size=100&id=8113&format=png&color=4AD8F0" alt="menu-icon" />
+                </div>
                 <nav>
                     <div className="link active"><a href="!#">Items</a></div>
                     <div className="link"><a href="!#">Upcoming</a></div>
@@ -26,6 +31,7 @@ function Header(props) {
                 </div>
             </div>
             <Cart price={props.price} remCart={props.remCart} cartItems={props.cartItems} isVisible={isVisible}/> 
+            
         </header>
     )
 }

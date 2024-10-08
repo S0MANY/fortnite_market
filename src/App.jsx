@@ -2,6 +2,7 @@ import React , {Component} from "react";
 import { Header } from "./Layout/Header";
 import { Main } from "./Layout/Main";
 import { Pagination } from "./Components/Pagination";
+import { ModalNav } from "./Components/ModalNav";
 
 
 const AUTH_KEY = process.env.REACT_APP_AUTH_KEY
@@ -82,7 +83,8 @@ class App extends Component {
 
   render() {
     return (  
-      <div className="app">
+      <>
+        <div className="app">
           <Header price={this.state.totalPrice} remCart={this.remFromCart} cartItems={this.state.cartItems}/>
           <Main
             isLoaded={this.state.isLoaded}
@@ -90,7 +92,10 @@ class App extends Component {
             addCart={this.addCart}
             />
           {this.state.isLoaded ? <Pagination next={this.nextPage} prev={this.prevPage} /> : "" }
-      </div>
+        </div>
+        <ModalNav/>
+      </>
+      
     )
   }
 

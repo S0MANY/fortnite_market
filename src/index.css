@@ -1,4 +1,5 @@
-body {
+@media (min-width:801px) {
+  body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -118,6 +119,10 @@ nav div:hover {
   align-items: center;
   width: 33%;
   cursor: pointer;
+}
+
+.menuIcon{
+  display: none;
 }
 
 main {
@@ -393,4 +398,5 @@ ul li {
   color: black;
   transition: 0.5s;
   cursor: pointer;
+}
 }

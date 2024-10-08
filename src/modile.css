@@ -1,0 +1,444 @@
+@media (min-width:1px) and (max-width:800px) {
+
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-image: url(./img/bg-repeat.png);
+        background-repeat: repeat;
+      }
+      
+      body::-webkit-scrollbar {
+        display: none; 
+      }
+      
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+      }
+      
+      header {
+        height: 12vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      nav {
+        display: flex;
+        width: 33%;
+        height: 100%;
+        justify-content: space-evenly;
+      }
+      
+      nav div {
+        box-sizing: border-box;
+        display: flex;
+        width: 25%;
+        max-height: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: 0.3s;
+        color: cyan;
+      }
+      
+      nav div a {
+        color: cyan;
+        text-decoration: none;
+        font-weight: 300;
+      }
+      
+      nav div:hover {
+        border-bottom: 3px solid cyan;
+        transition: 0.3s;
+      }
+      
+      .active{
+        border-bottom: 3px solid cyan;
+      }
+      
+      .head {
+        height: 100%;
+      }
+      
+      .head {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33%;  
+      }
+      
+      .logo img {
+        position: relative;
+        top: 20px;
+        background: transparent;
+        box-shadow: 0 0 120px 0 cyan;
+        border-radius: 25px;
+        padding: 5px;
+        background-color: rgba(0, 255, 247, 0.281);
+      }
+      
+      .cartCount {
+        color: black;
+        background-color: cyan;
+        position: absolute;
+        top: 30px;
+        right: -15px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 12;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+      }
+      
+      .cart{
+        position: relative;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 33%;
+        cursor: pointer;
+      }
+      
+      .menuIcon{
+        display: none;
+      }
+      
+      main {
+        margin: auto;
+        margin-top: 50px;
+        padding: 0 10%;
+        height: 100%;
+        display: flex;
+        max-width: 1440px;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      
+      .item{
+        height: 210px;
+        width: 200px;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      
+      .item__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 190px;
+        max-width: 100%;
+        
+        
+      }
+      
+      .item img{
+        margin-top: 10px;
+        max-height: 100px;
+        max-width: 100px;
+        box-shadow: 2px 2px 20px 0 black;
+      }
+      
+      .item__name h2 {
+        max-height: 30px;
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      
+      .item__desc p{
+        max-height: 30px;
+        margin: 0;
+        font-size: 12px;
+        text-align: center;
+      }
+      
+      .item__checkout {
+        height: 50px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .item__buy{
+        height: 100%;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 10px;
+        border: 1px solid cyan;
+        color:cyan;
+        transition: 0.1s;
+      }
+      
+      .item__buy:hover{
+        background-color: cyan;
+        opacity: 0.8;
+        color: black;
+        cursor: pointer;
+        transition: 0.1s;
+      }
+      
+      .Legendary{
+        position: relative;
+        background: rgb(252,245,57);
+      background: radial-gradient(circle, rgba(252,245,57,1) 0%, rgba(161,97,7,1) 100%);
+      }
+      
+      .Legendary::after{
+        content: "Leg";
+        color:black;
+        font-weight: 500;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      
+      .Epic{
+        position: relative;
+        background: rgb(247,57,252);
+        background: radial-gradient(circle, rgba(247,57,252,1) 0%, rgba(67,7,161,1) 100%);
+      }
+      
+      .Epic::after{
+        content: "Epic";
+        color:black;
+        font-weight: 500;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      
+      .Rare{
+        position: relative;
+        background: rgb(57,122,252);
+        background: radial-gradient(circle, rgba(57,122,252,1) 0%, rgba(52,5,136,1) 100%);
+      }
+      
+      .Rare::after{
+        content: "Rar";
+        color:black;
+        font-weight: 500;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      
+      .pagination {
+        height: 60px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: cyan;
+      }
+      
+      .next , .prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 30px;
+        border: 1px solid cyan;
+        border-radius: 10px;
+        transition: 0.1s;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      
+      .next:hover , .prev:hover {
+        background-color: cyan;
+        opacity: 0.8;
+        color: black;
+        cursor: pointer;
+        transition: 0.1s;
+      }
+      
+      .pagination {
+        margin: auto;
+      }
+      
+      .cartBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        position: absolute;
+        z-index: 10;
+        right: calc(50%-100px);
+        top:100px;
+        width: 30vw;
+        min-width: 200px;
+        min-height: 200px;
+        background: rgb(70,5,5);
+        background: radial-gradient(circle, rgba(70,5,5,1) 0%, rgba(4,0,11,1) 100%);
+        border-radius: 10px;  
+        opacity: 1;
+        transition: 0.5s;
+        scale: 1.1;
+      }
+      
+      .cartBox .name{
+        margin: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid cyan;
+        width: 90%;
+        height: 15%;
+        text-align: center;
+        color: cyan;
+        
+      }
+      
+      .hide{
+        opacity: 0;
+        transform: translateY(-300px);
+        transition: 0.5s;
+        scale: 1;
+      }
+      
+      .emptyCart {
+        color:white;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      ul {
+        color: white;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+      }
+      
+      ul li {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        padding: 5px 10px;
+      }
+      
+      .item__info {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        align-items: center;
+      }
+      
+      .rem_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        cursor: pointer;
+      }
+      
+      .price {
+        width: 90%;
+        height: 40px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        border-top: 1px solid cyan ;
+      }
+      
+      
+      .forCheckout {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .checkout {
+        width: 150px;
+        height: 40px;
+        border: 1px solid cyan;
+        border-radius: 10px ;
+        color: cyan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+      }
+      
+      .checkout:hover {
+        background-color: cyan;
+        color: black;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+
+    body{
+        position: relative;
+        z-index: 1;
+    }
+    .menuIcon{
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .head {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .cart{
+        position: relative;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 10%;
+        cursor: pointer;
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+
+      
+    }
+      
+
